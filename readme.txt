@@ -1,0 +1,1 @@
+This is the code archive for the SitePoint book Jump Start JavaScript. 

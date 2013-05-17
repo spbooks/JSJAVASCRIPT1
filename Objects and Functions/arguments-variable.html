@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    function concatenate() {
+      var i, str;
+
+      str = "";
+      for (i = 0; i < arguments.length; i += 1) {
+        str += arguments[i];
+      }
+      return str;
+    }
+
+    alert(concatenate("Super", "cali", "fragilistic", "expiali", "docious"));
+    // returns Supercalifragilisticexpialidocious
+  </script>
+</body>
+</html>

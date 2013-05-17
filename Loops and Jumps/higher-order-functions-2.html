@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    function countByOwner(tasks, name) {
+      return tasks.filter(function(task) {
+        return task.owner === name;
+      }).length;
+    }
+
+    var tasks = [
+      {name: 'Buy milk', owner: 'James'},
+      {name: 'Trash', owner: 'Jill'},
+      {name: 'Bills', owner: 'Paul'},
+      {name: 'Repairs', owner: 'Jill'},
+      {name: 'Plumber', owner: 'James'}
+    ];
+
+    console.log(countByOwner(tasks, 'James'));
+  </script>
+</body>
+</html>

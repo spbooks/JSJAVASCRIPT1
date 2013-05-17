@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    var d, hours, minutes, time, message;
+
+    // Get the current time's hour and minute components
+    d = new Date();
+    hours = d.getHours();
+    minutes = d.getMinutes();
+
+    // Make sure the hour is a double digit string
+    if (hours < 10) {
+      hours = "0" + hours; // converts hours to string
+    } else {
+      hours = hours.toString();
+    }
+
+    // Make sure the minutes are a double digit string
+    if (minutes < 10) {
+      minutes = "0" + minutes; // converts minutes to string
+    } else {
+      minutes = minutes.toString();
+    }
+
+    // Concatenate hours and minutes into a quadruple digit number 
+    // representing the time in 24 hour format
+    time = Number(hours + minutes);
+
+    if (time >= 0000 && time < 1200) {
+      message = "Good morning!";
+    } else if (time >= 1200 && time < 1700) {
+      message = "Good afternoon!";
+    } else if (time >= 1700 && time < 2100) {
+      message = "Good evening!";
+    } else if (time >= 2100 && time <= 2359) {
+      message = "Good night!";
+    }
+
+    alert(message);
+  </script>
+</body>
+</html>

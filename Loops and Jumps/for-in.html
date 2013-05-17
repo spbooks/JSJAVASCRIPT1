@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    var agents = {
+      '005': "Michael Harp",
+      '006': "John Smith",
+      '007': "James Bond"
+    };
+
+    for (key in agents) {
+        if ('007' === key) {
+          console.log('Bond, ' + agents[key] + ' has been found!');
+        } else {
+          console.log('Standard spy, ' + agents[key] + ' has been found');
+        }
+    }
+  </script>
+</body>
+</html>

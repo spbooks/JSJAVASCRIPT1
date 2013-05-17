@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    // Declaring a global variable and giving it the value "a"
+    var a = "a";
+
+    function levelb() {
+      // Declaring a variable that levelb and its children can see
+      var b = "b";
+
+      function levelc() {
+        // Declaring a variable only levelc and leveld can see
+        var c = "c";
+
+        function leveld() {
+          // Declaring a variable only leveld can see
+          var d = "d";
+
+          console.log("leveld", a, b, c, d);
+        }
+
+        // Running leveld() will output a, b, c and d
+        leveld();
+
+        console.log("levelc", a, b, c);
+      }
+
+      // Running levelc() will output a, b, and c
+      levelc();
+
+      console.log("levelb", a, b);
+    }
+
+    // Running levelb() will output a and b
+    levelb();
+
+    // Only the variable named "a" is available globally
+    console.log("global", a);
+  </script>
+</body>
+</html>

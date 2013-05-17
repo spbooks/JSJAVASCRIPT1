@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    var tasks = [
+      {name: 'Buy milk', complete: false},
+      {name: 'Trash', complete: false},
+      {name: 'Pay bills', complete: true},
+      {name: 'Repairs', complete: false},
+      {name: 'Plumber', complete: true}
+    ];
+    var firstComplete;
+
+    for (var i = 0; i < tasks.length; i++) {
+      if (tasks[i].complete) {
+        firstComplete = tasks[i];
+        break;
+      }
+    }
+
+    console.log(firstComplete);
+  </script>
+</body>
+</html>

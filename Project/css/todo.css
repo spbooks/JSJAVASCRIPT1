@@ -1,0 +1,19 @@
+#todo{
+    width: 320px;
+    padding: 10px;
+    background: #FFFFFA;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #888;
+}
+
+.todo-right {
+    display: block;
+    float: right;
+}
+
+.task-text {
+  width: 182px;
+}

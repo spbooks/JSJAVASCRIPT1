@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    var tasks = [
+      {name: 'Buy milk', owner: 'James'},
+      {name: 'Trash', owner: 'Jill'},
+      {name: 'Bills', owner: 'Paul'},
+      {name: 'Repairs', owner: 'Jill'},
+      {name: 'Plumber', owner: 'James'}
+    ];
+    var newTasks = tasks.filter(function(task) {
+      return task.owner === 'Paul' || task.owner === 'James'
+    }).map(function(t) {
+      t.owner = 'David'; 
+
+      return t;
+    });
+
+    console.log(newTasks);
+  </script>
+</body>
+</html>

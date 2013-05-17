@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+
+    var div1, div2, div3;
+
+    div1 = document.createElement("div");
+    div2 = document.createElement("div");
+    div3 = document.createElement("div");
+    div3.className = "chocolate";
+    console.log(div1.isEqualNode(div2)); // returns true
+    console.log(div1.isEqualNode(div3)); // returns false
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Todo</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      .complete {
+        text-decoration: line-through;
+      }
+      .template {
+        display: none;
+      }
+      canvas {
+        background: #eee;
+      }
+    </style>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="css/todo.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" id="todo">
+      <div class="page-header">
+        <h2>Your To Do List</h2>
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">
+            Sort By <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a href="#" id="sortByName">Name</a></li>
+            <li><a href="#" id="sortByLowHigh">Priority Low To High</a></li>
+            <li><a href="#" id="sortByHighLow">Priority High To Low</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <form id="add" class="form-horizontal">
+        <input id="newTask">
+        <input id="addTaskButton" type="submit" class="btn pull-right" value="Add">
+        <div id="row"><h3><span id="warning" class="label label-warning"></span></h3></div>
+      </form>
+      <form id="tasks">
+        <ul class="unstyled">
+        </ul>
+      </form>
+    </div>
+    <div align="center">
+        <br /><br />
+        <h2>Productivity Chart</h2>
+        <canvas id="canvas" height="300" width="400">
+          To Do:<div id="numToDo"></div>
+          Done:<div id="numDone"></div>      
+        </canvas>
+            <div class='row'>
+      <a id='printChart' href='' class='btn'>Print Chart</a>
+    </div>
+    </div>
+    <ul class="template">
+      <li class="template-item">
+        <input type="checkbox" >
+        <span class="task-text label"></span>
+        <input type="button" class="btn btn-mini delete-task" value="Delete" >
+        <div class="btn-group">
+          <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+            Priority
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="highpriority" value="1">High</a>
+            </li>
+            <li>
+              <a href="#" class="normalpriority" value="2">Normal</a>
+            </li>
+            <li>
+              <a href="#" class="lowpriority" value="3">Low</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <script src="todo.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+  </body>
+</html>

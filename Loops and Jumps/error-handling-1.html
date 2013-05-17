@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    function divideBy(numerator, denominator) {
+      if (denominator === 0) {
+        throw new Error('Denominator must be non zero');
+      }
+
+      return numerator / denominator;
+    }
+
+    try {
+      var result = divideBy(7, 2);
+
+      console.log(result);
+    } catch (e) {
+      console.log(e.message); 
+    } finally {
+      console.log('This will always execute');
+    }
+  </script>
+</body>
+</html>
